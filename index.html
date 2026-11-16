@@ -1,0 +1,830 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f7f9fc">
+<meta name="description" content="شركة الركن للمقاولات العامة - تنفيذ أعمال المقاولات والتجهيز والتشطيب والخدمات الإنشائية.">
+<title>شركة الركن للمقاولات العامة | RUKN GENERAL CONTRACTING</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root{
+  --primary:#244c70;
+  --primary-dark:#173650;
+  --primary-light:#e5f0f7;
+  --gold:#b99158;
+  --gold-light:#e5d1ae;
+  --bg:#f7f9fc;
+  --white:#fff;
+  --surface:#eef2f6;
+  --text:#203448;
+  --muted:#718096;
+  --line:#e3e9ef;
+  --shadow:0 12px 35px rgba(28,58,84,.08);
+  --radius:20px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text);line-height:1.9;overflow-x:hidden}
+button,input,textarea{font-family:inherit}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer}
+img{max-width:100%;display:block}
+.container{width:min(1180px,92%);margin:auto}
+.section{padding:100px 0;position:relative}
+.section-white{background:var(--white)}
+.section-soft{background:#f0f4f8}
+.section-heading{text-align:center;max-width:760px;margin:0 auto 55px}
+.section-tag{display:inline-flex;align-items:center;gap:9px;color:var(--gold);font-size:13px;font-weight:800;margin-bottom:13px}
+.section-tag:before,.section-tag:after{content:"";width:25px;height:1px;background:var(--gold)}
+.section-heading h2{font-size:clamp(27px,4vw,39px);color:var(--primary-dark);font-weight:900;line-height:1.5;margin-bottom:12px}
+.section-heading p{color:var(--muted);font-size:15px}
+.gold-text{color:var(--gold)}
+
+/* Header */
+.header{position:fixed;z-index:1000;top:0;left:0;width:100%;background:rgba(255,255,255,.95);backdrop-filter:blur(18px);border-bottom:1px solid rgba(36,76,112,.08);transition:.3s}
+.nav{height:82px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.brand-icon{width:48px;height:48px;border-radius:14px;background:linear-gradient(145deg,var(--primary),var(--primary-dark));color:white;display:grid;place-items:center;font-size:22px;box-shadow:0 7px 18px rgba(36,76,112,.2);border-bottom:3px solid var(--gold)}
+.brand-text strong{display:block;color:var(--primary-dark);font-size:18px;font-weight:900;line-height:1.5}
+.brand-text span{display:block;color:var(--gold);font-size:9px;font-weight:800;letter-spacing:1.4px;direction:ltr;text-align:right}
+.nav-links{display:flex;align-items:center;gap:27px;list-style:none}
+.nav-links a{color:#526477;font-size:13px;font-weight:700;transition:.25s;position:relative}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:after{content:"";position:absolute;bottom:-8px;right:0;width:0;height:2px;background:var(--gold);transition:.3s}
+.nav-links a:hover:after{width:100%}
+.nav-contact{background:var(--primary);color:white;padding:11px 21px;border-radius:10px;font-size:12px;font-weight:800;transition:.3s;white-space:nowrap}
+.nav-contact:hover{background:var(--gold);transform:translateY(-2px)}
+.menu-btn{display:none;width:43px;height:43px;border:1px solid var(--line);background:white;color:var(--primary);border-radius:11px;font-size:19px}
+
+/* Hero */
+.hero{min-height:740px;padding:155px 0 95px;position:relative;display:flex;align-items:center;overflow:hidden;background:linear-gradient(90deg,rgba(247,249,252,.97),rgba(247,249,252,.91) 55%,rgba(247,249,252,.68)),url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1900&q=85") center/cover}
+.hero:before{content:"";position:absolute;width:500px;height:500px;border:1px solid rgba(185,145,88,.18);border-radius:50%;left:-220px;top:100px;box-shadow:0 0 0 45px rgba(185,145,88,.035),0 0 0 90px rgba(185,145,88,.025)}
+.hero-content{max-width:760px;position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:9px;padding:9px 17px;background:white;border:1px solid var(--line);color:var(--primary);border-radius:50px;font-size:12px;font-weight:800;box-shadow:var(--shadow);margin-bottom:25px}
+.hero-badge i{color:var(--gold)}
+.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.35;font-weight:900;color:var(--primary-dark);margin-bottom:20px}
+.hero h1 span{color:var(--gold);display:block}
+.hero-description{max-width:650px;color:#647487;font-size:16px;line-height:2.2;margin-bottom:32px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:13px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 26px;border-radius:11px;font-size:13px;font-weight:800;transition:.3s;border:1px solid transparent}
+.btn-primary{background:var(--primary);color:white;box-shadow:0 9px 22px rgba(36,76,112,.2)}
+.btn-primary:hover{background:var(--primary-dark);transform:translateY(-3px)}
+.btn-outline{border-color:#ccd7e1;color:var(--primary);background:white}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:45px;margin-top:55px;padding-top:25px;border-top:1px solid rgba(36,76,112,.13);max-width:570px}
+.hero-stat strong{display:block;color:var(--primary);font-size:25px;font-weight:900}
+.hero-stat span{color:var(--muted);font-size:11px;font-weight:700}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.about-image-wrap{position:relative;padding:0 0 25px 25px}
+.about-image{width:100%;height:460px;object-fit:cover;border-radius:22px;box-shadow:var(--shadow)}
+.about-image-wrap:before{content:"";position:absolute;left:0;bottom:0;width:65%;height:65%;border:4px solid var(--gold);border-radius:22px;z-index:-1}
+.about-label{position:absolute;bottom:48px;right:-15px;background:white;border-radius:15px;padding:19px 24px;box-shadow:var(--shadow);border-right:4px solid var(--gold)}
+.about-label strong{display:block;color:var(--primary);font-size:20px;font-weight:900}
+.about-label span{font-size:11px;color:var(--muted)}
+.about-content .section-tag:before{display:none}
+.about-content h2{font-size:clamp(28px,4vw,39px);color:var(--primary-dark);font-weight:900;line-height:1.5;margin-bottom:18px}
+.about-content>p{color:var(--muted);font-size:14px;line-height:2.3;margin-bottom:25px}
+.about-points{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:28px}
+.about-point{display:flex;align-items:center;gap:11px;color:var(--primary);font-size:13px;font-weight:800}
+.about-point i{width:34px;height:34px;display:grid;place-items:center;background:var(--primary-light);color:var(--gold);border-radius:10px;flex-shrink:0}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.service-card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:30px 25px;transition:.35s;position:relative;overflow:hidden;box-shadow:0 5px 18px rgba(28,58,84,.035)}
+.service-card:before{content:"";position:absolute;top:0;right:0;height:4px;width:0;background:var(--gold);transition:.35s}
+.service-card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:rgba(185,145,88,.35)}
+.service-card:hover:before{width:100%}
+.service-icon{width:61px;height:61px;display:grid;place-items:center;background:var(--primary-light);color:var(--primary);border-radius:17px;font-size:25px;margin-bottom:21px;transition:.3s}
+.service-card:hover .service-icon{background:var(--primary);color:white}
+.service-card h3{color:var(--primary-dark);font-size:18px;font-weight:900;margin-bottom:10px}
+.service-card p{color:var(--muted);font-size:13px;line-height:2.1}
+
+/* Projects */
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:23px}
+.project-card{background:white;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 6px 20px rgba(28,58,84,.05);transition:.35s}
+.project-card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+.project-image-wrap{height:230px;overflow:hidden;position:relative;background:var(--surface)}
+.project-image{width:100%;height:100%;object-fit:cover;transition:.6s}
+.project-card:hover .project-image{transform:scale(1.07)}
+.project-status{position:absolute;top:15px;right:15px;background:white;color:var(--primary);padding:6px 13px;border-radius:50px;font-size:10px;font-weight:900;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.project-content{padding:21px}
+.project-content h3{color:var(--primary-dark);font-size:17px;font-weight:900;margin-bottom:9px}
+.project-content p{color:var(--muted);font-size:12px;line-height:2;margin-bottom:17px}
+.project-meta{display:flex;flex-wrap:wrap;gap:15px;border-top:1px solid var(--line);padding-top:14px;color:#8795a4;font-size:11px}
+.project-meta i{color:var(--gold);margin-left:5px}
+.empty-state{text-align:center;color:var(--muted);background:white;padding:35px;border-radius:16px;border:1px dashed #ccd7e1;grid-column:1/-1}
+
+/* Why */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:19px}
+.why-card{background:white;border:1px solid var(--line);border-radius:17px;padding:28px 19px;text-align:center;transition:.3s}
+.why-card:hover{transform:translateY(-6px);border-color:var(--gold-light);box-shadow:var(--shadow)}
+.why-icon{width:60px;height:60px;margin:0 auto 17px;display:grid;place-items:center;background:var(--primary-light);color:var(--gold);font-size:23px;border-radius:50%}
+.why-card h3{color:var(--primary);font-size:15px;font-weight:900;margin-bottom:8px}
+.why-card p{color:var(--muted);font-size:11px;line-height:2}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:35px;align-items:stretch}
+.contact-info{background:linear-gradient(145deg,var(--primary-dark),var(--primary));border-radius:22px;padding:37px 30px;color:white;position:relative;overflow:hidden}
+.contact-info:after{content:"";position:absolute;width:260px;height:260px;border:1px solid rgba(255,255,255,.1);border-radius:50%;left:-120px;bottom:-120px;box-shadow:0 0 0 35px rgba(255,255,255,.025)}
+.contact-info h3{font-size:25px;font-weight:900;margin-bottom:12px;position:relative;z-index:1}
+.contact-info>p{color:rgba(255,255,255,.7);font-size:13px;margin-bottom:32px;position:relative;z-index:1}
+.contact-item{display:flex;align-items:center;gap:14px;margin-bottom:24px;position:relative;z-index:1}
+.contact-item-icon{width:43px;height:43px;flex-shrink:0;display:grid;place-items:center;color:var(--gold-light);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:12px}
+.contact-item span{display:block;color:rgba(255,255,255,.6);font-size:10px}
+.contact-item strong{display:block;color:white;font-size:13px;font-weight:700;direction:ltr;text-align:right;overflow-wrap:anywhere}
+.social-links{display:flex;gap:10px;margin-top:35px;position:relative;z-index:1}
+.social-links a{width:39px;height:39px;border-radius:11px;display:grid;place-items:center;color:white;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.12);transition:.3s}
+.social-links a:hover{background:var(--gold);transform:translateY(-3px)}
+.contact-form{background:white;border:1px solid var(--line);border-radius:22px;padding:37px;box-shadow:var(--shadow)}
+.contact-form h3{color:var(--primary-dark);font-size:23px;font-weight:900;margin-bottom:7px}
+.contact-form>p{color:var(--muted);font-size:12px;margin-bottom:25px}
+.form-group{margin-bottom:17px}
+.form-group label{display:block;color:var(--primary);font-size:12px;font-weight:800;margin-bottom:7px}
+.form-control{width:100%;padding:13px 15px;border:1px solid #e1e7ed;background:#f9fbfd;border-radius:10px;color:var(--text);font-size:13px;outline:none;transition:.25s}
+.form-control:focus{border-color:var(--gold);background:white;box-shadow:0 0 0 3px rgba(185,145,88,.1)}
+.form-control::placeholder{color:#aab5c0}
+textarea.form-control{min-height:130px;resize:vertical}
+.send-btn{width:100%;border:none;margin-top:5px}
+.send-btn:disabled{opacity:.65;cursor:not-allowed}
+
+/* Footer */
+.footer{background:#142d43;color:white;padding:55px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.3fr .8fr .9fr;gap:45px;padding-bottom:40px}
+.footer-brand .brand-text strong{color:white}
+.footer-brand>p{color:rgba(255,255,255,.6);font-size:12px;line-height:2.2;margin-top:20px;max-width:350px}
+.footer h4{color:var(--gold-light);font-size:15px;font-weight:900;margin-bottom:19px}
+.footer-links{list-style:none}
+.footer-links li{margin-bottom:11px}
+.footer-links a{color:rgba(255,255,255,.65);font-size:12px;transition:.25s}
+.footer-links a:hover{color:var(--gold-light);padding-right:5px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:rgba(255,255,255,.5);font-size:11px}
+.footer-bottom strong{color:var(--gold-light)}
+
+/* Toast and animations */
+.toast{position:fixed;bottom:25px;left:25px;z-index:2000;padding:14px 21px;background:#173650;color:white;border-radius:12px;box-shadow:var(--shadow);font-size:13px;font-weight:700;opacity:0;visibility:hidden;transform:translateY(15px);transition:.3s;max-width:min(400px,calc(100% - 40px))}
+.toast.show{opacity:1;visibility:visible;transform:translateY(0)}
+.toast.success{border-right:4px solid #5bb88a}
+.toast.error{border-right:4px solid #e06e6e}
+.reveal{opacity:0;transform:translateY(25px);transition:.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:1000px){
+.nav-links{gap:15px}
+.nav-links a{font-size:12px}
+.about-grid{gap:35px}
+.why-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:780px){
+.section{padding:75px 0}
+.nav{height:72px}
+.menu-btn{display:grid;place-items:center}
+.nav-contact{display:none}
+.nav-links{position:absolute;top:72px;right:0;width:100%;padding:15px 5% 22px;background:white;border-bottom:1px solid var(--line);box-shadow:var(--shadow);display:none;flex-direction:column;align-items:stretch;gap:0}
+.nav-links.active{display:flex}
+.nav-links li{border-bottom:1px solid #edf1f5}
+.nav-links li:last-child{border:none}
+.nav-links a{display:block;padding:12px 5px;font-size:13px}
+.nav-links a:after{display:none}
+.hero{min-height:auto;padding:140px 0 75px}
+.hero-description{font-size:14px}
+.hero-stats{gap:25px}
+.about-grid{grid-template-columns:1fr}
+.about-image-wrap{max-width:570px;margin:auto}
+.about-image{height:350px}
+.services-grid,.projects-grid{grid-template-columns:repeat(2,1fr)}
+.contact-grid{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+.brand-text strong{font-size:15px}
+.brand-text span{font-size:8px}
+.brand-icon{width:42px;height:42px}
+.hero h1{font-size:39px}
+.hero-stats{gap:18px}
+.hero-stat strong{font-size:21px}
+.services-grid,.projects-grid,.why-grid{grid-template-columns:1fr}
+.about-points{grid-template-columns:1fr}
+.about-image{height:290px}
+.about-label{right:0;bottom:35px}
+.contact-form{padding:25px 19px}
+.footer-grid{grid-template-columns:1fr;gap:28px}
+.footer-bottom{flex-direction:column;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){
+*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <a href="#home" class="brand">
+      <div class="brand-icon"><i class="fa-solid fa-building"></i></div>
+      <div class="brand-text">
+        <strong>شركة الركن للمقاولات</strong>
+        <span>RUKN GENERAL CONTRACTING</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">الرئيسية</a></li>
+      <li><a href="#about">من نحن</a></li>
+      <li><a href="#services">خدماتنا</a></li>
+      <li><a href="#projects">مشاريعنا</a></li>
+      <li><a href="#why">لماذا الركن؟</a></li>
+      <li><a href="#contact">تواصل معنا</a></li>
+    </ul>
+
+    <a href="#contact" class="nav-contact">اطلب خدمتنا <i class="fa-solid fa-arrow-left"></i></a>
+    <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content reveal">
+      <div class="hero-badge"><i class="fa-solid fa-award"></i> الجودة في التنفيذ... والثقة في التعامل</div>
+      <h1>نبني بثقة،<span>وننجز باحتراف.</span></h1>
+      <p class="hero-description">
+        شركة الركن للمقاولات العامة، نقدم حلولاً متكاملة في أعمال المقاولات والتجهيز والتشطيب وإزالة الركام وتنظيف المواقع والتصنيع والتركيب، وفق رؤية تجمع بين جودة التنفيذ والالتزام والاهتمام بالتفاصيل.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-building"></i> استكشف مشاريعنا</a>
+        <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-phone"></i> تواصل معنا</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>01</strong><span>جودة في التنفيذ</span></div>
+        <div class="hero-stat"><strong>02</strong><span>التزام بالمواعيد</span></div>
+        <div class="hero-stat"><strong>03</strong><span>حلول متكاملة</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="about">
+  <div class="container about-grid">
+    <div class="about-image-wrap reveal">
+      <img class="about-image" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85" alt="أعمال المقاولات والإنشاء" loading="lazy">
+      <div class="about-label"><strong>RUKN</strong><span>GENERAL CONTRACTING</span></div>
+    </div>
+    <div class="about-content reveal">
+      <div class="section-tag">من نحن</div>
+      <h2>الركن... شريكك في <span class="gold-text">الإنجاز والبناء</span></h2>
+      <p>نعمل في شركة الركن للمقاولات العامة على تقديم خدمات المقاولات والأعمال الإنشائية والتجهيزات المختلفة، من خلال الاهتمام بالتفاصيل واختيار الحلول المناسبة لطبيعة كل مشروع واحتياجاته.</p>
+      <p>نؤمن بأن نجاح أي مشروع يبدأ من التخطيط الجيد، ويمتد إلى التنفيذ المتقن والمتابعة المستمرة، وصولاً إلى نتائج تحقق تطلعات العملاء.</p>
+      <div class="about-points">
+        <div class="about-point"><i class="fa-solid fa-check"></i> جودة التنفيذ</div>
+        <div class="about-point"><i class="fa-solid fa-check"></i> الالتزام والمسؤولية</div>
+        <div class="about-point"><i class="fa-solid fa-check"></i> حلول عملية</div>
+        <div class="about-point"><i class="fa-solid fa-check"></i> اهتمام بالتفاصيل</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft" id="services">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div class="section-tag">خدماتنا</div>
+      <h2>خدمات متكاملة <span class="gold-text">بمعايير احترافية</span></h2>
+      <p>نقدم مجموعة من الخدمات المتخصصة التي تلبي احتياجات المشاريع والأعمال الإنشائية والتجهيزية.</p>
+    </div>
+
+    <div class="services-grid" id="servicesGrid">
+      <article class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-truck-monster"></i></div>
+        <h3>إزالة الركام والردم</h3>
+        <p>إزالة الركام ومخلفات المباني وأعمال الردم وتسوية المواقع وتجهيزها.</p>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-broom"></i></div>
+        <h3>تنظيف المواقع</h3>
+        <p>تنظيف المباني والأراضي والساحات وتجهيز المواقع للاستخدام.</p>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-border-all"></i></div>
+        <h3>الشبابيك الحديدية</h3>
+        <p>تفصيل وتصنيع وتركيب الشبابيك والأعمال الحديدية وفق متطلبات المشروع.</p>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-door-open"></i></div>
+        <h3>الأبواب والشبابيك الخشبية</h3>
+        <p>تفصيل وتركيب الأبواب والشبابيك الخشبية بمختلف التصاميم والمقاسات.</p>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+        <h3>أعمال المقاولات</h3>
+        <p>تنفيذ أعمال المقاولات والتجهيزات والأعمال الإنشائية حسب طبيعة المشروع.</p>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-paint-roller"></i></div>
+        <h3>التجهيز والتشطيب</h3>
+        <p>أعمال التجهيز والتشطيبات وتحسين المباني والمساحات المختلفة.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="projects">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div class="section-tag">معرض الأعمال</div>
+      <h2>مشاريعنا <span class="gold-text">على أرض الواقع</span></h2>
+      <p>نستعرض مجموعة من الأعمال والمشاريع التي تعكس طبيعة خدماتنا واهتمامنا بجودة التنفيذ.</p>
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+      <div class="empty-state"><i class="fa-solid fa-spinner fa-spin"></i> جارٍ تحميل المشاريع...</div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft" id="why">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div class="section-tag">لماذا الركن؟</div>
+      <h2>شراكة تقوم على <span class="gold-text">الثقة والإنجاز</span></h2>
+      <p>نعمل على تقديم تجربة مهنية ترتكز على الوضوح والجودة والاهتمام بالعميل.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-icon"><i class="fa-solid fa-medal"></i></div><h3>الجودة</h3><p>الاهتمام بمستوى التنفيذ والتفاصيل في مختلف مراحل العمل.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><i class="fa-solid fa-clock"></i></div><h3>الالتزام</h3><p>تنظيم مراحل العمل والحرص على الالتزام بالاتفاقات والمواعيد.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><i class="fa-solid fa-gears"></i></div><h3>الخبرة الفنية</h3><p>اختيار أساليب العمل والحلول المناسبة لطبيعة كل مشروع.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><i class="fa-solid fa-handshake"></i></div><h3>الثقة</h3><p>التواصل الواضح ومتابعة احتياجات العملاء ومتطلبات مشاريعهم.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="contact">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div class="section-tag">تواصل معنا</div>
+      <h2>لنبدأ مشروعك <span class="gold-text">القادم معاً</span></h2>
+      <p>يسعدنا استقبال استفساراتكم وطلباتكم ومناقشة تفاصيل مشاريعكم.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>ابقَ على تواصل</h3>
+        <p>تواصل معنا للحصول على المعلومات أو الاستفسار عن خدماتنا.</p>
+
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+          <div><span>رقم الهاتف وواتساب</span><strong id="contactPhone">0594344675</strong></div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div><span>البريد الإلكتروني</span><strong id="contactEmail">سيتم تحديثه قريباً</strong></div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div><span>موقع الشركة</span><strong id="contactAddress">فلسطين</strong></div>
+        </div>
+
+        <div class="social-links">
+          <a href="#" id="facebookLink" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" id="instagramLink" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/970594344675" id="whatsappLink" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm">
+        <h3>أرسل لنا رسالة</h3>
+        <p>املأ البيانات التالية وسيتم تجهيز رسالة واتساب مباشرة إلى الشركة.</p>
+
+        <div class="form-group">
+          <label for="name">الاسم الكامل</label>
+          <input class="form-control" id="name" name="name" type="text" placeholder="أدخل اسمك الكامل" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">رقم الهاتف</label>
+          <input class="form-control" id="phone" name="phone" type="tel" placeholder="أدخل رقم هاتفك" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">موضوع الرسالة</label>
+          <input class="form-control" id="subject" name="subject" type="text" placeholder="موضوع الاستفسار">
+        </div>
+
+        <div class="form-group">
+          <label for="message">تفاصيل الرسالة</label>
+          <textarea class="form-control" id="message" name="message" placeholder="اكتب تفاصيل طلبك أو استفسارك..." required></textarea>
+        </div>
+
+        <button class="btn btn-primary send-btn" id="sendBtn" type="submit">
+          <i class="fa-brands fa-whatsapp"></i> إرسال عبر واتساب
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <div class="brand-icon"><i class="fa-solid fa-building"></i></div>
+          <div class="brand-text">
+            <strong>شركة الركن للمقاولات</strong>
+            <span>RUKN GENERAL CONTRACTING</span>
+          </div>
+        </a>
+        <p>نعمل على تقديم خدمات المقاولات العامة والتجهيز والتشطيب والأعمال المختلفة، برؤية تركز على الجودة والثقة والإنجاز.</p>
+      </div>
+
+      <div>
+        <h4>روابط سريعة</h4>
+        <ul class="footer-links">
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#about">من نحن</a></li>
+          <li><a href="#services">خدماتنا</a></li>
+          <li><a href="#projects">مشاريعنا</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>مجالات العمل</h4>
+        <ul class="footer-links">
+          <li><a href="#services">إزالة الركام والردم</a></li>
+          <li><a href="#services">تنظيف المواقع</a></li>
+          <li><a href="#services">الأعمال الحديدية</a></li>
+          <li><a href="#services">الأعمال الخشبية</a></li>
+          <li><a href="#services">التجهيز والتشطيب</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>جميع الحقوق محفوظة © <span id="year"></span> شركة الركن للمقاولات العامة</span>
+      <span>تصميم وتنفيذ: <strong>RUKN TECHNOLOGY GROUP</strong></span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ==========================================
+   RUKN GENERAL CONTRACTING
+   Website Frontend Engine
+   ========================================== */
+
+const API_URL = "https://script.google.com/macros/s/AKfycbxGlxS8wtcmhwzwk8EJrkHVMfSSuKsNqkFo_PKXlZ1oeeistajWke05zlYzWE4DnJsgxA/exec";
+
+const CONFIG = {
+  companyName: "شركة الركن للمقاولات العامة",
+  fallbackImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80"
+};
+
+/* رقم واتساب الشركة */
+const WHATSAPP_NUMBER = "970594344675";
+
+/* Toast */
+function toast(message,type="success"){
+  const element=document.getElementById("toast");
+  if(!element)return;
+  element.textContent=message;
+  element.className="toast show "+type;
+  clearTimeout(window.toastTimer);
+  window.toastTimer=setTimeout(()=>{
+    element.className="toast";
+  },4500);
+}
+
+/* API configuration */
+function isConfigured(){
+  return API_URL &&
+    API_URL.startsWith("https://") &&
+    !API_URL.includes("YOUR_API_URL");
+}
+
+/* API communication */
+async function api(action,data=null){
+  if(!isConfigured()){
+    throw new Error("رابط API غير مضبوط.");
+  }
+
+  let url=API_URL;
+
+  if(data===null){
+    const separator=url.includes("?")?"&":"?";
+    url+=separator+"action="+encodeURIComponent(action);
+
+    const response=await fetch(url,{
+      method:"GET",
+      redirect:"follow"
+    });
+
+    if(!response.ok)throw new Error("تعذر الاتصال بالخادم.");
+    return await response.json();
+  }
+
+  const response=await fetch(url,{
+    method:"POST",
+    redirect:"follow",
+    headers:{"Content-Type":"text/plain;charset=utf-8"},
+    body:JSON.stringify({action,...data})
+  });
+
+  if(!response.ok)throw new Error("تعذر إرسال البيانات إلى الخادم.");
+  return await response.json();
+}
+
+/* Safe text */
+function safeText(value){
+  return String(value??"").replace(/[&<>"']/g,character=>({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#039;"
+  })[character]);
+}
+
+/* Safe URL */
+function safeUrl(value,fallback=""){
+  try{
+    const url=new URL(value,window.location.href);
+    if(!["http:","https:"].includes(url.protocol))return fallback;
+    return url.href;
+  }catch{
+    return fallback;
+  }
+}
+
+/* Render projects */
+function renderProjects(projects){
+  const container=document.getElementById("projectsGrid");
+  if(!container)return;
+
+  const visibleProjects=Array.isArray(projects)
+    ?projects.filter(project=>
+      String(project.status||"نشط").toLowerCase()!=="مخفي")
+    :[];
+
+  if(!visibleProjects.length){
+    container.innerHTML=`
+      <div class="empty-state">
+        <i class="fa-solid fa-folder-open"></i>
+        <p>سيتم إضافة المشاريع قريباً.</p>
+      </div>`;
+    return;
+  }
+
+  container.innerHTML=visibleProjects.map(project=>{
+    const image=safeUrl(project.imageUrl,CONFIG.fallbackImage);
+
+    return `
+      <article class="project-card reveal">
+        <div class="project-image-wrap">
+          <img class="project-image"
+            src="${image}"
+            alt="${safeText(project.title||"مشروع من مشاريع الركن")}"
+            loading="lazy"
+            onerror="this.onerror=null;this.src='${CONFIG.fallbackImage}'">
+          <span class="project-status">${safeText(project.status||"مشروع")}</span>
+        </div>
+        <div class="project-content">
+          <h3>${safeText(project.title||"مشروع جديد")}</h3>
+          <p>${safeText(project.description||"")}</p>
+          <div class="project-meta">
+            ${project.location?`<span><i class="fa-solid fa-location-dot"></i>${safeText(project.location)}</span>`:""}
+            ${project.date?`<span><i class="fa-regular fa-calendar"></i>${safeText(project.date)}</span>`:""}
+          </div>
+        </div>
+      </article>`;
+  }).join("");
+
+  observeReveal();
+}
+
+/* Render services */
+function renderServices(services){
+  const container=document.getElementById("servicesGrid");
+  if(!container||!Array.isArray(services)||!services.length)return;
+
+  const iconMap={
+    "إزالة الركام":"fa-truck-monster",
+    "الركام":"fa-truck-monster",
+    "الردم":"fa-truck-monster",
+    "تنظيف":"fa-broom",
+    "حديد":"fa-border-all",
+    "شبابيك":"fa-border-all",
+    "خشبية":"fa-door-open",
+    "أبواب":"fa-door-open",
+    "كهرباء":"fa-bolt",
+    "مقاولات":"fa-helmet-safety",
+    "تشطيب":"fa-paint-roller",
+    "تجهيز":"fa-gears",
+    "صيانة":"fa-screwdriver-wrench"
+  };
+
+  const defaultIcons=[
+    "fa-building",
+    "fa-hammer",
+    "fa-ruler-combined",
+    "fa-screwdriver-wrench"
+  ];
+
+  container.innerHTML=services.map((service,index)=>{
+    const title=service.title||service.name||"خدمة جديدة";
+    const description=service.description||"";
+    const matchedKey=Object.keys(iconMap).find(key=>title.includes(key));
+    const icon=service.icon||(matchedKey?iconMap[matchedKey]:defaultIcons[index%defaultIcons.length]);
+
+    return `
+      <article class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid ${safeText(icon)}"></i></div>
+        <h3>${safeText(title)}</h3>
+        <p>${safeText(description)}</p>
+      </article>`;
+  }).join("");
+
+  observeReveal();
+}
+
+/* Load website data */
+async function loadWebsite(){
+  if(!isConfigured())return;
+
+  try{
+    const [projectsResult,servicesResult,settingsResult]=await Promise.all([
+      api("getProjects"),
+      api("getServices"),
+      api("getSettings")
+    ]);
+
+    if(projectsResult&&projectsResult.success!==false){
+      renderProjects(projectsResult.data||projectsResult.projects||[]);
+    }
+
+    if(servicesResult&&servicesResult.success!==false){
+      renderServices(servicesResult.data||servicesResult.services||[]);
+    }
+
+    const settings=settingsResult?.data||settingsResult?.settings||settingsResult||{};
+
+    const phone=document.getElementById("contactPhone");
+    const email=document.getElementById("contactEmail");
+    const address=document.getElementById("contactAddress");
+
+    if(phone&&settings.phone)phone.textContent=settings.phone;
+    if(email&&settings.email)email.textContent=settings.email;
+    if(address&&settings.address)address.textContent=settings.address;
+
+    const facebook=document.getElementById("facebookLink");
+    const instagram=document.getElementById("instagramLink");
+    const whatsapp=document.getElementById("whatsappLink");
+
+    if(facebook&&settings.facebook)facebook.href=safeUrl(settings.facebook,"#");
+    if(instagram&&settings.instagram)instagram.href=safeUrl(settings.instagram,"#");
+
+    /* يبقى واتساب موجهاً إلى رقم الشركة المحدد */
+    if(whatsapp)whatsapp.href="https://wa.me/"+WHATSAPP_NUMBER;
+
+  }catch(error){
+    console.error("Website loading error:",error);
+    toast("تعذر تحميل بعض البيانات. يرجى المحاولة لاحقاً.","error");
+  }
+}
+
+/* ==========================================
+   CONTACT FORM - WHATSAPP
+   ========================================== */
+
+const contactForm=document.getElementById("contactForm");
+
+if(contactForm){
+  contactForm.addEventListener("submit",function(event){
+    event.preventDefault();
+
+    const sendBtn=document.getElementById("sendBtn");
+    const formData=new FormData(contactForm);
+
+    const name=String(formData.get("name")||"").trim();
+    const phone=String(formData.get("phone")||"").trim();
+    const subject=String(formData.get("subject")||"").trim();
+    const message=String(formData.get("message")||"").trim();
+
+    if(!name||!phone||!message){
+      toast("يرجى تعبئة الاسم ورقم الهاتف وتفاصيل الرسالة.","error");
+      return;
+    }
+
+    if(!WHATSAPP_NUMBER){
+      toast("رقم واتساب الشركة غير مضبوط.","error");
+      return;
+    }
+
+    const whatsappMessage=
+`*طلب تواصل جديد - شركة الركن للمقاولات العامة*
+━━━━━━━━━━━━━━━━━━
+
+*الاسم:* ${name}
+
+*رقم الهاتف:* ${phone}
+
+*موضوع الرسالة:* ${subject||"استفسار عام"}
+
+*تفاصيل الطلب:*
+${message}
+
+━━━━━━━━━━━━━━━━━━
+*المصدر: الموقع الإلكتروني لشركة الركن*`;
+
+    const whatsappURL=
+      "https://wa.me/"+
+      WHATSAPP_NUMBER+
+      "?text="+
+      encodeURIComponent(whatsappMessage);
+
+    /* فتح واتساب مباشرة من تفاعل المستخدم */
+    const whatsappWindow=window.open(whatsappURL,"_blank");
+
+    if(whatsappWindow){
+      whatsappWindow.opener=null;
+    }else{
+      window.location.href=whatsappURL;
+    }
+
+    toast("تم تجهيز رسالتك. اضغط إرسال داخل واتساب لإتمام الإرسال.","success");
+  });
+}
+
+/* Mobile menu */
+const menuBtn=document.getElementById("menuBtn");
+const navLinks=document.getElementById("navLinks");
+
+if(menuBtn&&navLinks){
+  menuBtn.addEventListener("click",()=>{
+    navLinks.classList.toggle("active");
+
+    const icon=menuBtn.querySelector("i");
+    if(icon){
+      icon.className=navLinks.classList.contains("active")
+        ?"fa-solid fa-xmark"
+        :"fa-solid fa-bars";
+    }
+  });
+
+  navLinks.querySelectorAll("a").forEach(link=>{
+    link.addEventListener("click",()=>{
+      navLinks.classList.remove("active");
+      const icon=menuBtn.querySelector("i");
+      if(icon)icon.className="fa-solid fa-bars";
+    });
+  });
+}
+
+/* Current year */
+document.getElementById("year").textContent=new Date().getFullYear();
+
+/* Reveal animation */
+function observeReveal(){
+  const elements=document.querySelectorAll(".reveal:not(.visible)");
+
+  if(!("IntersectionObserver" in window)){
+    elements.forEach(element=>element.classList.add("visible"));
+    return;
+  }
+
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:.12});
+
+  elements.forEach(element=>observer.observe(element));
+}
+
+/* Start */
+document.addEventListener("DOMContentLoaded",()=>{
+  observeReveal();
+  loadWebsite();
+});
+</script>
+
+</body>
+</html>
